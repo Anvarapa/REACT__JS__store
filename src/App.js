@@ -30,7 +30,7 @@ function App() {
                         <Detail />
                     </Route>
                     <Route exact path="/basket">
-                        <Basket />
+                        <Basket data={data} />
                     </Route>
                     <Route exact path="/">
                         <Main data={data}/>
