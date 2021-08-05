@@ -9,11 +9,13 @@ import Basket from "./view/pages/basket/Basket"
 import Main from "./view/pages/main/Main";
 import {useEffect, useState} from "react";
 import Detail from "./view/pages/detail/Detail";
+import { Create } from "./view/pages/create/Create"
+
 
 function App() {
     const [data, setData] = useState([])
     useEffect(() => {
-        fetch("https://605b21f027f0050017c063b9.mockapi.io/api/v2/shoose")
+        fetch("https://60f1203338ecdf0017b0fa4e.mockapi.io/shoose")
             .then((res) => res.json())
             .then((data) => {
                 setData(data)
@@ -31,6 +33,9 @@ function App() {
                     </Route>
                     <Route exact path="/basket">
                         <Basket data={data} />
+                    </Route>
+                    <Route exact path="/create">
+                        <Create/>
                     </Route>
                     <Route exact path="/">
                         <Main data={data}/>

@@ -38,6 +38,9 @@ export function Header() {
                     <Link className={classes.link} to="/basket">
                         <Button color="inherit">Корзина</Button>
                     </Link>
+                    <Link className={classes.link} to="/create">
+                        <Button color="inherit">ДОБАВИТЬ ТОВАР</Button>
+                    </Link>
                 </Toolbar>
             </AppBar>
         </div>
